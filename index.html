@@ -1,39 +1,56 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKRCG4RTT0"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-RKRCG4RTT0');
-    </script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookStore</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/cart.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>BookStore</h1>
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="catalog.html">Каталог</a>
-            <a href="contact.html">Контакты</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Добро пожаловать в BookStore</h2>
-            <p>Мы предлагаем широкий выбор книг для всех возрастов и интересов.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 BookStore. Все права защищены.</p>
-    </footer>
+<header>
+    <h1>BookStore</h1>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contact.html">Контакты</a>
+        <a href="cart.html">Корзина</a>
+    </nav>
+</header>
+<main>
+    <section class="intro">
+        <h2>Добро пожаловать в BookStore</h2>
+        <p>Мы предлагаем огромный выбор книг для всех возрастов и интересов.</p>
+    </section>
+    <section class="featured-books">
+        <h2>Популярные книги</h2>
+        <div class="catalog">
+            <div class="book-card">
+                <img src="images/book1.jpg" alt="Книга 1">
+                <h3>Гордость и предубеждение</h3>
+                <p>Автор: Джейн Эир</p>
+                <p>Цена: 20р</p>
+                <button class="add-to-cart" data-id="1">Добавить в корзину</button>
+            </div>
+            <div class="book-card">
+                <img src="images/book2.jpg" alt="Книга 2">
+                <h3>Атлант расправил плечи</h3>
+                <p>Автор: Айн Рэнд</p>
+                <p>Цена: 40р</p>
+                <button class="add-to-cart" data-id="2">Добавить в корзину</button>
+            </div>
+            <div class="book-card">
+                <img src="images/book3.jpg" alt="Книга 3">
+                <h3>Кафе  на  краю  земли</h3>
+                <p>Автор: Джон Стрелки</p>
+                <p>Цена: 15р</p>
+                <button class="add-to-cart" data-id="3">Добавить в корзину</button>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2025 BookStore. Все права защищены.</p>
+</footer>
 </body>
 </html>
