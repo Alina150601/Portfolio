@@ -66,35 +66,6 @@
             var(--color-accent-second)
     );
 }
-/* @font-face {
-   font-family: Poppins;
-   src: url(../fonts/Poppins-Bold.woff2) format("woff2"), url(../Poppins-Bold.woff) format("woff");
-   font-weight: 700;
-   font-display: swap;
-   font-style: normal;
-}
-@font-face {
-   font-family: SourceSansPro;
-   src: url(../fonts/SourceSansPro-Bold.woff2) format("woff2"), url(../SourceSansPro-Bold.woff) format("woff");
-   font-weight: 700;
-   font-display: swap;
-   font-style: normal;
-}
-@font-face {
-   font-family: SourceSansPro;
-   src: url(../fonts/SourceSansPro-Regular.woff2) format("woff2"), url(../SourceSansPro-Regular.woff) format("woff");
-   font-weight: 400;
-   font-display: swap;
-   font-style: normal;
-}
-@font-face {
-   font-family: SourceSansPro;
-   src: url(../fonts/SourceSansPro-ExtraLight.woff2) format("woff2"),
-      url(../SourceSansPro-ExtraLight.woff) format("woff");
-   font-weight: 200;
-   font-display: swap;
-   font-style: normal;
-} */
 html {
     box-sizing: border-box;
     scrollbar-width: none;
@@ -1030,7 +1001,7 @@ svg {
 }
 .about {
     padding: clamp(60px, 7vw, 120px) 0;
-    background-image: url(../img/bg1_1920x840.jpg);
+    background-image: url(../images/photowithme1.png);
     background-image: -webkit-image-set(
             url("../img/bg1_1920x840.avif") 1x,
             url("../img/bg1_1920x840.webp") 1x,
@@ -1094,16 +1065,16 @@ svg {
 .contact {
     /*    padding: clamp(60px, 7vw, 120px) 0; */
     padding: 120px 0;
-    background-image: url(../img/bg2_1920x820.jpg);
+    background-image: url(../img/photowithme1.png);
     background-image: -webkit-image-set(
-            url("../img/bg2_1920x820.avif") 1x,
-            url("../img/bg2_1920x820.webp") 1x,
-            url("../img/bg2_1920x820.jpg") 1x
+            url("/img/photowithme1.png") 1x,
+            url("/images/img/photowithme1.png") 1x,
+            url("../images/photowithme1.png") 1x
     );
     background-image: image-set(
-            url("../img/bg2_1920x820.avif") 1x,
-            url("../img/bg2_1920x820.webp") 1x,
-            url("../img/bg2_1920x820.jpg") 1x
+            url("../images/photowithme1.png") 1x,
+            url("../images/photowithme1.png") 1x,
+            url("../images/photowithme1.png") 1x
     );
     background-position: center;
     background-size: cover;
@@ -2010,16 +1981,16 @@ body.img-8-wrap .cursor3 {
         font-size: 18px;
     }
     .about {
-        background-image: url(../img/bg1_1800x2000.jpg);
+        background-image: url(images/photowithme1.png);
         background-image: -webkit-image-set(
-                url("../img/bg1_1800x2000.avif") 1x,
-                url("../img/bg1_1800x2000.webp") 1x,
-                url("../img/bg1_1800x2000.jpg") 1x
+                url("../images/photowithme1.png") 1x,
+                url("..images/photowithme1.png") 1x,
+                url("../images/photowithme1.png") 1x
         );
         background-image: image-set(
-                url("../img/bg1_1800x2000.avif") 1x,
-                url("../img/bg1_1800x2000.webp") 1x,
-                url("../img/bg1_1800x2000.jpg") 1x
+                url("../images/photowithme1.png") 1x,
+                url("../images/photowithme1.png") 1x,
+                url("../images/photowithme1.png") 1x
         );
     }
     .about__wrapper {
@@ -2154,16 +2125,16 @@ body.img-8-wrap .cursor3 {
         bottom: 20px;
     }
     .about {
-        background-image: url(../img/bg1_1200x1800.jpg);
+        background-image: url(../images/photowithme1.png);
         background-image: -webkit-image-set(
-                url("../img/bg1_1200x1800.avif") 1x,
-                url("../img/bg1_1200x1800.webp") 1x,
-                url("../img/bg1_1200x1800.jpg") 1x
+                url("../images/photowithme1.png") 1x,
+                url("../images/photowithme1.png") 1x,
+                url("../images/photowithme1.png") 1x
         );
         background-image: image-set(
-                url("../img/bg1_1200x1800.avif") 1x,
-                url("../img/bg1_1200x1800.webp") 1x,
-                url("../img/bg1_1200x1800.jpg") 1x
+                url("../images/photowithme1.png") 1x,
+                url("../images/photowithme1.png") 1x,
+                url("../images/photowithme1.png") 1x
         );
     }
     .skill-items {
@@ -2481,6 +2452,16 @@ body.img-8-wrap .cursor3 {
     overflow-x: hidden;
 }
 
-/* .grecaptcha-badge {
-	opacity: 0;
-} */
+/* Индикатор загрузки, который покрывает экран */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; /* Скрыт по умолчанию */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}

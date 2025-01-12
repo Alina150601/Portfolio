@@ -44,7 +44,8 @@
     <link rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'" id="contact-form-7" href="https://syhanoff.ru/wp-content/plugins/contact-form-7/includes/css/styles.css" media="all">
     <link rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'" id="normalize" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" media="all">
     <link rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'" id="portfolio-style" href="https://syhanoff.ru/wp-content/themes/portfolio/assets/css/style.css" media="all">
-
+    
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="/scripts/gsap.min.js" id="portfolio-scripts_gsap-js" defer=""></script>
     <style></style><!-- Google tag (gtag.js) -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6T1X7DH4J9"></script>
@@ -776,43 +777,37 @@
 
                 <div class="wpcf7 js" id="wpcf7-f733-o1" lang="ru-RU" dir="ltr">
                     <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-                    <form action="/#wpcf7-f733-o1" method="post" class="wpcf7-form wpcf7-acceptance-as-validation init" aria-label="Контактная форма" novalidate="novalidate" data-status="init">
-                        <div style="display: none;">
-                            <input type="hidden" name="_wpcf7" value="733">
-                            <input type="hidden" name="_wpcf7_version" value="5.9.8">
-                            <input type="hidden" name="_wpcf7_locale" value="ru_RU">
-                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f733-o1">
-                            <input type="hidden" name="_wpcf7_container_post" value="0">
-                            <input type="hidden" name="_wpcf7_posted_data_hash" value="">
-                        </div>
-                        <div class="contact__form hover-mouse">
-                            <div class="contact__form-inner contact__form-inner_name">
-                                <p><label class="contact__form-label" for="name">Ваше имя</label><br>
-                                    <span class="wpcf7-form-control-wrap" data-name="your-name"><input size="35" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required contact__form-input" id="name" aria-required="true" aria-invalid="false" value="" type="text" name="your-name"></span>
-                                </p>
-                            </div>
-                            <div class="contact__form-inner contact__form-inner_email">
-                                <p><label class="contact__form-label" for="email">Ваша почта</label><br>
-                                    <span class="wpcf7-form-control-wrap" data-name="your-email"><input size="35" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email contact__form-input" id="email" aria-required="true" aria-invalid="false" value="" type="email" name="your-email"></span>
-                                </p>
-                            </div>
-                            <div class="contact__form-inner contact__form-inner_text">
-                                <p><label class="contact__form-label" for="text">Ваше сообщение</label><br>
-                                    <span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required contact__form-input" id="text" aria-required="true" aria-invalid="false" name="your-message"></textarea></span>
-                                </p>
-                            </div>
-                            <div class="contact__form-send">
-                                <p><button type="submit" class="contact__form-btn btn">Отправить</button>
-                                </p>
-                                <div class="contact__form-policy">
-                                    <p><span class="wpcf7-form-control-wrap" data-name="acceptance-policy"><span class="wpcf7-form-control wpcf7-acceptance optional"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-policy" value="1" class="contact__form-input" id="agree" aria-invalid="false"><span class="wpcf7-list-item-label">Я&nbsp;согласен (а)</span></label></span></span></span><label class="contact__form-label contact__form-label_policy" for="agree"> <a class=" decor-link decor-link_fullpolicy" href="/policy/" target="_blank"> с&nbsp;политикой конфиденциальности</a><a class=" decor-link decor-link_shortpolicy" href="/policy/" target="_blank"> с&nbsp;политикой</a></label>
+                    <div class="wpcf7 js" lang="ru-RU" dir="ltr">
+                        <form id="contact-form" method="post" class="wpcf7-form wpcf7-acceptance-as-validation init" aria-label="Контактная форма" novalidate="novalidate">
+                            <div class="contact__form hover-mouse">
+                                <div class="contact__form-inner contact__form-inner_name">
+                                    <p><label class="contact__form-label" for="name">Ваше имя</label><br>
+                                        <span class="wpcf7-form-control-wrap" data-name="your-name">
+                        <input size="35" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required contact__form-input" id="name" value="" type="text" name="your-name">
+                    </span>
                                     </p>
                                 </div>
+                                <div class="contact__form-inner contact__form-inner_email">
+                                    <p><label class="contact__form-label" for="email">Ваша почта</label><br>
+                                        <span class="wpcf7-form-control-wrap" data-name="your-email">
+                        <input size="35" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email contact__form-input" id="email" value="" type="email" name="your-email">
+                    </span>
+                                    </p>
+                                </div>
+                                <div class="contact__form-inner contact__form-inner_text">
+                                    <p><label class="contact__form-label" for="text">Ваше сообщение</label><br>
+                                        <span class="wpcf7-form-control-wrap" data-name="your-message">
+                        <textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required contact__form-input" id="text" name="your-message"></textarea>
+                    </span>
+                                    </p>
+                                </div>
+                                <div class="contact__form-send">
+                                    <p><button type="submit" class="contact__form-btn btn">Отправить</button></p>
+                                </div>
                             </div>
-                        </div>
-                        <p></p><div class="cf7-cf-turnstile" style="margin-top: 0px; margin-bottom: -15px;"> <div id="cf-turnstile-cf7-1094931780" class="cf-turnstile" data-callback="turnstileCF7Callback" data-sitekey="0x4AAAAAAAPYJNFmzVyzsgeS" data-theme="dark" data-language="auto" data-retry="auto" data-retry-interval="1000" data-action="contact-form-7" data-appearance="interaction-only"><div><input type="hidden" name="cf-turnstile-response" id="cf-chl-widget-j4ctt_response" value=""></div></div> <style>-cf7-1094931780 { pointer-events: none; opacity: 0.5; }</style> <script>document.addEventListener("DOMContentLoaded",(function(){var e=document.getElementById("cf-turnstile-cf7-1094931780");e&&!e.innerHTML.trim()&&(turnstile.remove("#cf-turnstile-cf7-1094931780"),turnstile.render("#cf-turnstile-cf7-1094931780",{sitekey:"0x4AAAAAAAPYJNFmzVyzsgeS"}))}));</script> <style>#cf-turnstile-cf7-1094931780 iframe { margin-bottom: 15px; }</style> <style>#cf-turnstile-cf7-1094931780 { margin-left: -15px; }</style> <script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll('.wpcf7-form').forEach(function(e){e.addEventListener('submit',function(){if(document.getElementById('cf-turnstile-cf7-1094931780')){setTimeout(function(){turnstile.reset('#cf-turnstile-cf7-1094931780');},1000)}})})});</script> </div>
-                        <p></p><input type="hidden" class="wpcf7-pum" value="{&quot;closepopup&quot;:false,&quot;closedelay&quot;:0,&quot;openpopup&quot;:false,&quot;openpopup_id&quot;:0}"><div class="wpcf7-response-output" aria-hidden="true"></div>
-                    </form>
+                            <div id="form-message"></div> <!-- Блок для уведомлений -->
+                        </form>
+                    </div>
                 </div>
 
             </div>
@@ -910,6 +905,27 @@
 </footer>
 <script>var pseudo_links = document.querySelectorAll(".pseudo-clearfy-link");for (var i=0;i<pseudo_links.length;i++ ) { pseudo_links[i].addEventListener("click", function(e){   window.open( e.target.getAttribute("data-uri") ); }); }
 </script>
+<script type="text/javascript">
+    // Инициализация EmailJS с вашим User ID
+    emailjs.init('E0Sck2YqbVdRozhiN'); // Ваш Public Key
+
+    // Обработчик отправки формы
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+        e.preventDefault(); // Предотвращаем стандартную отправку формы
+
+        // Отправка формы с помощью EmailJS
+        emailjs.sendForm('service_1oz5yah', 'template_p0ki6yq', this) // Заменяем на свой Service ID и Template ID
+            .then(function(response) {
+                // Уведомление об успешной отправке
+                document.getElementById("form-message").innerHTML = "<p>Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.</p>";
+                document.getElementById("contact-form").reset(); // Сбрасываем форму
+            }, function(error) {
+                // Уведомление об ошибке
+                document.getElementById("form-message").innerHTML = "<p>Произошла ошибка при отправке. Попробуйте позже.</p>";
+            });
+    });
+</script>
+
 
 
 </body></html>
