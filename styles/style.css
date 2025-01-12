@@ -2465,3 +2465,37 @@ body.img-8-wrap .cursor3 {
     align-items: center;
     z-index: 9999;
 }
+
+#loading-overlay {
+    position: absolute;
+    top: 60%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: none; 
+    z-index: 9999;
+
+#loading-overlay p {
+    margin: 0;
+    font-family: 'Helvetica', sans-serif; 
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    animation: blink 1s infinite;
+}
+
+.contact__form-send {
+    position: relative;
+    z-index: 1; 
+}
+
+.contact__form-btn {
+    position: relative;
+    z-index: 1; 
+}
+}

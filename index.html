@@ -774,40 +774,41 @@
                 <h3 class="contact__subtitle-form contact__subtitle-form_full subtitle subtitle_small">или воспользуйтесь формой, и&nbsp;я&nbsp;сама вам напишу:</h3>
                 <h3 class="contact__subtitle-form contact__subtitle-form_short subtitle subtitle_small">или на&nbsp;почте:</h3>
 
-
                 <div class="wpcf7 js" id="wpcf7-f733-o1" lang="ru-RU" dir="ltr">
                     <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-                    <div class="wpcf7 js" lang="ru-RU" dir="ltr">
-                        <form id="contact-form" method="post" class="wpcf7-form wpcf7-acceptance-as-validation init" aria-label="Контактная форма" novalidate="novalidate">
-                            <div class="contact__form hover-mouse">
-                                <div class="contact__form-inner contact__form-inner_name">
-                                    <p><label class="contact__form-label" for="name">Ваше имя</label><br>
-                                        <span class="wpcf7-form-control-wrap" data-name="your-name">
+                    <form id="contact-form" method="post" class="wpcf7-form wpcf7-acceptance-as-validation init" aria-label="Контактная форма" novalidate="novalidate">
+                        <div class="contact__form hover-mouse">
+                            <div class="contact__form-inner contact__form-inner_name">
+                                <p><label class="contact__form-label" for="name">Ваше имя</label><br>
+                                    <span class="wpcf7-form-control-wrap" data-name="your-name">
                         <input size="35" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required contact__form-input" id="name" value="" type="text" name="your-name">
                     </span>
-                                    </p>
-                                </div>
-                                <div class="contact__form-inner contact__form-inner_email">
-                                    <p><label class="contact__form-label" for="email">Ваша почта</label><br>
-                                        <span class="wpcf7-form-control-wrap" data-name="your-email">
+                                </p>
+                            </div>
+                            <div class="contact__form-inner contact__form-inner_email">
+                                <p><label class="contact__form-label" for="email">Ваша почта</label><br>
+                                    <span class="wpcf7-form-control-wrap" data-name="your-email">
                         <input size="35" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email contact__form-input" id="email" value="" type="email" name="your-email">
                     </span>
-                                    </p>
-                                </div>
-                                <div class="contact__form-inner contact__form-inner_text">
-                                    <p><label class="contact__form-label" for="text">Ваше сообщение</label><br>
-                                        <span class="wpcf7-form-control-wrap" data-name="your-message">
+                                </p>
+                            </div>
+                            <div class="contact__form-inner contact__form-inner_text">
+                                <p><label class="contact__form-label" for="text">Ваше сообщение</label><br>
+                                    <span class="wpcf7-form-control-wrap" data-name="your-message">
                         <textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required contact__form-input" id="text" name="your-message"></textarea>
                     </span>
-                                    </p>
-                                </div>
-                                <div class="contact__form-send">
-                                    <p><button type="submit" class="contact__form-btn btn">Отправить</button></p>
-                                </div>
+                                </p>
                             </div>
-                            <div id="form-message"></div> <!-- Блок для уведомлений -->
-                        </form>
-                    </div>
+                            <div class="contact__form-send">
+                                <p><button type="submit" class="contact__form-btn btn">Отправить</button></p>
+                            </div>
+                        </div>
+                        <div id="form-message"></div> <!-- Блок для уведомлений -->
+                        <!-- Индикатор загрузки -->
+                        <div id="loading-overlay" style="display: none;">
+                            <p>Загрузка...</p>
+                        </div>
+                    </form>
                 </div>
 
             </div>
@@ -903,25 +904,24 @@
         </div>
     </div>
 </footer>
-<script>var pseudo_links = document.querySelectorAll(".pseudo-clearfy-link");for (var i=0;i<pseudo_links.length;i++ ) { pseudo_links[i].addEventListener("click", function(e){   window.open( e.target.getAttribute("data-uri") ); }); }
-</script>
+    
 <script type="text/javascript">
-    // Инициализация EmailJS с вашим User ID
-    emailjs.init('E0Sck2YqbVdRozhiN'); // Ваш Public Key
 
-    // Обработчик отправки формы
+    emailjs.init('E0Sck2YqbVdRozhiN');
+
     document.getElementById("contact-form").addEventListener("submit", function(e) {
-        e.preventDefault(); // Предотвращаем стандартную отправку формы
+        e.preventDefault();
 
-        // Отправка формы с помощью EmailJS
-        emailjs.sendForm('service_1oz5yah', 'template_p0ki6yq', this) // Заменяем на свой Service ID и Template ID
+        document.getElementById("loading-overlay").style.display = 'block';
+
+        emailjs.sendForm('service_1oz5yah', 'template_p0ki6yq', this) 
             .then(function(response) {
-                // Уведомление об успешной отправке
-                document.getElementById("form-message").innerHTML = "<p>Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.</p>";
-                document.getElementById("contact-form").reset(); // Сбрасываем форму
+                document.getElementById("form-message").innerHTML = "<p>Спасибо за ваше сообщение! Я свяжусь с вами в ближайшее время.</p>";
+                document.getElementById("contact-form").reset(); 
+                document.getElementById("loading-overlay").style.display = 'none';
             }, function(error) {
-                // Уведомление об ошибке
                 document.getElementById("form-message").innerHTML = "<p>Произошла ошибка при отправке. Попробуйте позже.</p>";
+                document.getElementById("loading-overlay").style.display = 'none';
             });
     });
 </script>
