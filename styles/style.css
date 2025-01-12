@@ -1536,22 +1536,22 @@ svg {
     margin-right: 20px;
 }
 body.img-3-wrap .cursor3 {
-    background-image: url('../img/WDI.jpg');
+    background-image: url('images/certificates/stepik-certificate-38218-d464b6b.svg');
 }
 body.img-4-wrap .cursor3 {
-    background-image: url('../img/WayUp.jpg');
+    background-image: url('images/certificates/stepik-certificate-38218-d464b6b.svg');
 }
 body.img-5-wrap .cursor3 {
-    background-image: url('../img/Science_design.jpg');
+    background-image: url('images/certificates/stepik-certificate-38218-d464b6b.svg');
 }
 body.img-6-wrap .cursor3 {
-    background-image: url('../img/Udemy1.jpg');
+    background-image: url('images/certificates/stepik-certificate-38218-d464b6b.svg');
 }
 body.img-7-wrap .cursor3 {
-    background-image: url('../img/Udemy2.jpg');
+    background-image: url('images/certificates/stepik-certificate-38218-d464b6b.svg');
 }
 body.img-8-wrap .cursor3 {
-    background-image: url('../img/Stepik1.jpg');
+    background-image: url('images/certificates/stepik-certificate-38218-d464b6b.svg');
 }
 .skills {
     /*    padding: clamp(60px, 7vw, 120px) 0; */
@@ -1983,14 +1983,14 @@ body.img-8-wrap .cursor3 {
     .about {
         background-image: url(images/photowithme1.png);
         background-image: -webkit-image-set(
-                url("../images/photowithme1.png") 1x,
-                url("..images/photowithme1.png") 1x,
-                url("../images/photowithme1.png") 1x
+                url("images/photowithme1.png") 1x,
+                url("images/photowithme1.png") 1x,
+                url("images/photowithme1.png") 1x
         );
         background-image: image-set(
-                url("../images/photowithme1.png") 1x,
-                url("../images/photowithme1.png") 1x,
-                url("../images/photowithme1.png") 1x
+                url("images/photowithme1.png") 1x,
+                url("images/photowithme1.png") 1x,
+                url("/images/photowithme1.png") 1x
         );
     }
     .about__wrapper {
